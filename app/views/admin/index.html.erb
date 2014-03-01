@@ -3,7 +3,11 @@
 <div class="row">
 	<div class="col-md-6">
 	<h2>Personal Info</h2>
+	<% if !@personal_info %>
+	<%= link_to 'Add personal info', new_personal_info_path %>
+	<% else %>
 	<%= render 'personal_infos/form' %>
+	<% end %>
 	</div>
 
 	<div class="col-md-6">

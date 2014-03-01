@@ -1,3 +1,7 @@
+<% if !@personal_info and !@jobs %>
+	<% link_to admin_path %>
+<% end %>
+
 	<div id="headerwrap" style="background: url(<%= asset_path @personal_info.image %>) no-repeat center top;">
 		<div class="container">
 			<div class="row centered">
