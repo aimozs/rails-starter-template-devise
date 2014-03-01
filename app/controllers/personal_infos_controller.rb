@@ -42,7 +42,7 @@ class PersonalInfosController < ApplicationController
   def update
     respond_to do |format|
       if @personal_info.update(personal_info_params)
-        format.html { redirect_to @personal_info, notice: 'Personal info was successfully updated.' }
+        format.html { redirect_to admin_path, notice: 'Personal info was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -69,6 +69,6 @@ class PersonalInfosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def personal_info_params
-      params.require(:personal_info).permit(:name, :tagline, :about, :address1, :address2, :suburb, :postcode, :state, :country, :email, :phone, :sociallink)
+      params.require(:personal_info).permit(:image, :name, :tagline, :about, :address1, :address2, :suburb, :postcode, :state, :country, :email, :phone, :sociallink)
     end
 end
