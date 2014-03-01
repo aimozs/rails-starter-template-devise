@@ -1,0 +1,49 @@
+<h1>Listing personal_infos</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Tagline</th>
+      <th>About</th>
+      <th>Address1</th>
+      <th>Address2</th>
+      <th>Suburb</th>
+      <th>Postcode</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Sociallink</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @personal_infos.each do |personal_info| %>
+      <tr>
+        <td><%= personal_info.name %></td>
+        <td><%= personal_info.tagline %></td>
+        <td><%= personal_info.about %></td>
+        <td><%= personal_info.address1 %></td>
+        <td><%= personal_info.address2 %></td>
+        <td><%= personal_info.suburb %></td>
+        <td><%= personal_info.postcode %></td>
+        <td><%= personal_info.state %></td>
+        <td><%= personal_info.country %></td>
+        <td><%= personal_info.email %></td>
+        <td><%= personal_info.phone %></td>
+        <td><%= personal_info.sociallink %></td>
+        <td><%= link_to 'Show', personal_info %></td>
+        <td><%= link_to 'Edit', edit_personal_info_path(personal_info) %></td>
+        <td><%= link_to 'Destroy', personal_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Personal info', new_personal_info_path %>

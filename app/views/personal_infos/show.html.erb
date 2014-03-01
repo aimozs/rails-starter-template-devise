@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @personal_info.name %>
+</p>
+
+<p>
+  <strong>Tagline:</strong>
+  <%= @personal_info.tagline %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @personal_info.about %>
+</p>
+
+<p>
+  <strong>Address1:</strong>
+  <%= @personal_info.address1 %>
+</p>
+
+<p>
+  <strong>Address2:</strong>
+  <%= @personal_info.address2 %>
+</p>
+
+<p>
+  <strong>Suburb:</strong>
+  <%= @personal_info.suburb %>
+</p>
+
+<p>
+  <strong>Postcode:</strong>
+  <%= @personal_info.postcode %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @personal_info.state %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @personal_info.country %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @personal_info.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @personal_info.phone %>
+</p>
+
+<p>
+  <strong>Sociallink:</strong>
+  <%= @personal_info.sociallink %>
+</p>
+
+<%= link_to 'Edit', edit_personal_info_path(@personal_info) %> |
+<%= link_to 'Back', personal_infos_path %>
